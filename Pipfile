@@ -8,6 +8,8 @@ django-cors-headers = "*"
 djangorestframework = "*"
 pillow = "*"
 braintree = "*"
+django = "*"
+mysqlclient = "*"
 
 [dev-packages]
 

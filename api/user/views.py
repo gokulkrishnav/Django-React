@@ -24,7 +24,8 @@ def signin(request):
     username = request.POST['email'] # extract from the database
     password = request.POST['password']
 
-    if not re.match("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$", username):
+    if not re.match("^[a-zA-Z0-9_\\.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-\\.]+$", username):
+
         return JsonResponse({'errro': 'Enter a valid email'})
     
     if len(password) < 3:
